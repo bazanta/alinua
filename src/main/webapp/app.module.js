@@ -6,6 +6,7 @@ angular.module('alinua', [
 	'erreur404',
 	'userMenu',
 	'profile',
+	// 'user',
 	'signUp',
 	'carouselProfils',
 	'login',

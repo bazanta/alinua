@@ -20,17 +20,10 @@
 			<h2>
 				{{$ctrl.profile.description.nom}} {{$ctrl.profile.description.prenom}}
 			</h2>
+			<img src="images/profile.jpg" class="d-inline-block align-top profile-image" alt="image profil">
 			<h3>
 				{{$ctrl.profile.description.formation}}
 			</h3>
-			<!--<h3>
-				<label class="btn btn-info active" ng-show="$ctrl.profile.recherche_emploi">
-					<input type="checkbox" checked> En recherche d'emploi
-				</label>
-				<label class="btn btn-info" ng-hide="$ctrl.profile.recherche_emploi">
-					<input type="checkbox"> En recherche d'emploi
-				</label>
-			</h3>-->
   		</div>
 		
 		<div class="col-lg-8 col-lg-offset-2">
@@ -92,7 +85,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Sauvegarder</button><!-- à gérer en javascript -->
+				<button type="submit" class="btn btn-primary">Sauvegarder</button>
 			</div>
 		</div>
 	</div>

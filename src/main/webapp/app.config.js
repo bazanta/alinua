@@ -21,5 +21,8 @@ angular
 		    .when('/profile', {
                 template: '<profile></profile>',
             })
+		    .when('/user', {
+                template: '<user></user>',
+            })
 		    .otherwise({redirectTo : '/erreur404'});
 	}]);

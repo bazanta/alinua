@@ -1,13 +1,13 @@
 angular
-	.module('profile')
-	.component('profile', {
-		templateUrl: 'profile/profile.html',
+	.module('user')
+	.component('user', {
+		templateUrl: 'user/user.html',
 		/**
-		 * Controlleur gérant l'affichage d'un profil publique
+		 * Controlleur gérant l'affichage d'un profil publique d'un user
 		 * @param $http		ressource permettant l'appel $http
-		 * @param Profile	service dans core/profile permettant la gestion des profils avec le back
+		 * @param User		service dans core/user permettant la gestion des users avec le back
 		 */
-		controller: ['$http','Profile', function ProfileController($http, Profile) {
+		controller: ['$http','User', function UserController($http, User) {
 			// Récupérer this dans la variable self
 			var self = this;
 
@@ -15,17 +15,17 @@ angular
 			self.loading = true;
 
 			/* Une fois que l'url Back sera ok, il faudra utiliser le service
-				this.profile = Profile.query();
+				this.user = User.query();
 			*/
 			/**
-			 * Méthode de récupération des informations du profil depuis un fichier json
+			 * Méthode de récupération des informations du user depuis un fichier json
 			 * Appelée au chargement de la page
-			 * @param profile/monProfile.json	fichier contenant les informations du profil
+			 * @param user/unUser.json	fichier contenant les informations du user
 			 */
-	        $http.get('profile/monProfile.json')
+	        $http.get('user/unUser.json')
 	            .then(function(response){
 					 // En cas de succès de lecture du fichier
-	                self.profile = response.data;
+	                self.user = response.data;
 	                self.loading = false;
 	            }, function(response){
 	            	// En cas d'erreur de lecture du fichier

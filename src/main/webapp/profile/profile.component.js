@@ -39,7 +39,7 @@ angular
 			 * Appelée à la soumission du formulaire ouvert après un clic sur le bouton "Modifier"
 			 */
 			self.editPromo = function () {
-				$http.get('profile/.json')
+				$http.get('profile/monProfile.json')
 					.then(function(editPromo){
 						$scope.list = [];
 						$scope.text = 'hello';

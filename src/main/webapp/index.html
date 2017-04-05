@@ -18,23 +18,6 @@
     </head>
 
     <body ng-app="alinua">
-   
-
-	<!-- Modal -->
-	<div class="modal fade" id="modalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">S'inscrire</h4>
-				</div>
-				<div class="modal-body">
-					<sign-up></sign-up>
-					<p>.</p>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
 
         <!-- Menu -->
         <header role="banner">
@@ -79,7 +62,7 @@
                             </li>
                             <li  ng-class="{'active': activePath == '/login'}">
                                 <!-- Trigger the modal with a button -->
-				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalSignup">S'incrire</button>
+								<sign-up></sign-up>
                             </li>
                         </ul>
                     </div>
@@ -134,8 +117,6 @@
         <script src="home-page/home-page.component.js"></script>
         <script src="erreur404/erreur404.module.js"></script>
         <script src="erreur404/erreur404.component.js"></script>
-        <script src="login/login.module.js"></script>
-        <script src="login/login.component.js"></script>
         <script src="user-menu/user-menu.module.js"></script>
         <script src="user-menu/user-menu.component.js"></script>
         <script src="profile/profile.module.js"></script>

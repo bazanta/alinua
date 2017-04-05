@@ -9,6 +9,5 @@ angular.module('alinua', [
 	// 'user',
 	'signUp',
 	'carouselProfils',
-	'login',
 	'userList'
 ]);

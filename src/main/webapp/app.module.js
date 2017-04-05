@@ -8,6 +8,5 @@ angular.module('alinua', [
 	'profile',
 	'signUp',
 	'carouselProfils',
-	'login',
 	'userList'
 ]);

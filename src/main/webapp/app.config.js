@@ -12,9 +12,6 @@ angular
 		    .when('/annonces', {
 		        template: '<annonce-list></annonce-list>',
 		    })
-		    .when('/login', {
-		        template: '<login></login>',
-		    })
 		    .when('/users', {
 		        template: '<user-list></user-list>',
 		    })

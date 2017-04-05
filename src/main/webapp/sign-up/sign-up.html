@@ -1,40 +1,23 @@
-<div class="col-lg-12" id="connexionActions">
-	
-	<div class="btn-group">
-		<button ng-disabled="$ctrl.isEtudiant" ng-click="etudiant()" class="btn btn-primary">
-			Etudiant
-		</button>
-		<button ng-disabled="!$ctrl.isEtudiant" ng-click="entreprise()" class="btn btn-primary">
-			Entreprise
-		</button>
-	</div>
-	
-	<div ng-switch on="$ctrl.tab">
-	  <div ng-switch-when="etudiant">
-	  	<h1>Etudiant</h1>
-	  	<form>
-	  	<p>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+   api_key: 775n9ttoxg45s6
+   authorize: true
+   onLoad: onLinkedInLoad
+</script>
 
-		</p>
-		</form>
-		<form novalidate>
-			<label for="datePromo">Promo:</label>
-			<input type="number" ng-model="datePromo" id="datePromo" name="datePromo" min="2000" max="" value="2017" />
-			<br/><br/>
-			<button ng-click="authenticate('linkedin')" class="btn btn-primary">
-				S'inscrire avec LinkedIn
-			</button>
-		</form>
-	  </div>
-	  <div ng-switch-when="entreprise">
-	  	<h1>Entreprise</h1>
-	 	 <button ng-click="authenticate('linkedin')" class="btn btn-primary">
-			S'inscrire avec LinkedIn
-		 </button>
-	  </div>
-	  <div ng-switch-default>	
-		 
-	  </div>
-	</div>
+<script type="text/javascript">   
+   // Setup an event listener to make an API call once auth is complete
+   function onLinkedInLoad() {
+       IN.Event.on(IN, "auth", getProfileData);
+   }    // Handle the successful return from the API call
+   function onSuccess(data) {
+       console.log(data);
+   }    // Handle an error response from the API call
+   function onError(error) {
+       console.log(error);
+   }    // Use the API call wrapper to request the member's basic profile data
+   function getProfileData() {
+       IN.API.Raw("/people/~").result(onSuccess).error(onError);
+   }
+</script>
 
-</div>
+<script type="in/Login"></script>
